@@ -1,10 +1,10 @@
 export { default as DashboardPage } from "./dashboard-page.svelte";
 export { default as DashboardMainNav } from "./main-nav.svelte";
 export { default as Newsfeed } from "./feed.svelte";
-export { default as RecentSales } from "./recent-sales.svelte";
 export { default as Search } from "./search.svelte";
 export { default as UserNav } from "./user-nav.svelte";
-export { default as NewsCarousel } from "./news-carousel.svelte";
+export { default as NewsCarousel } from "./legal-news.svelte";
 export { default as TeamSwitcher } from "./team-switcher.svelte";
 export { default as AppGrid } from "./application-grid.svelte";
 export { default as Placeholder } from "./placeholder.svelte";
+export { default as QuoteOfTheDay } from "./quote.svelte";

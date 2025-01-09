@@ -3,11 +3,14 @@
   import Training from "./training.svelte";
 </script>
 
-<div class="w-full max-h-full overflow-y-hidden h-full px-6 py-8">
+<div class="w-full max-h-full h-full overflow-y-hidden px-6 pt-8">
   <div
     class="flex items-center fixed justify-between space-y-2 bg-inherit sticky"
   >
     <h2 class="text-3xl font-bold tracking-tight">Training</h2>
   </div>
-  <Training />
+
+  <div class="w-full h-full flex flex-col overflow-y-auto pb-10">
+    <Training />
+  </div>
 </div>

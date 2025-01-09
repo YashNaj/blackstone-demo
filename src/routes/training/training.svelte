@@ -25,7 +25,7 @@
   let projects = $state([]);
 </script>
 
-<div class="grid gap-6">
+<div class="grid gap-6 pt-8 pb-10">
   <!-- Projects Card -->
   <Card>
     <CardHeader>
