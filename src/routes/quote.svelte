@@ -10,7 +10,7 @@
     loading = true;
     console.log("Fetching new quote...");
     try {
-      const response = await fetch("http://api.quotable.io/random");
+      const response = await fetch("https://api.quotable.io/random");
       console.log("Response status:", response.status);
 
       if (!response.ok) {
