@@ -21,9 +21,11 @@
       Notifications
     </Tabs.Trigger>
   </Tabs.List>
-  <Tabs.Content value="news" class="bg-yellow-500 h-full w-full flex-1">
+  <Tabs.Content value="news" class="h-full w-full flex-1">
     <div class="flex flex-col md:flex-row flex-grow space-x-4 h-full">
-      <div class="relative flex flex-col flex-1 bg-white rounded-lg shadow-sm">
+      <div
+        class="border relative flex flex-col flex-1 bg-white dark:bg-black dark:border-white rounded-lg shadow-sm"
+      >
         <h3 class="font-bold px-3 py-3 z-[3]">News</h3>
         <div class="absolute top-0 left-0 w-full h-full rounded-lg">
           <Newsfeed />
@@ -42,6 +44,11 @@
   ></Tabs.Content>
   <Tabs.Content value="people" class="bg-blue-500 h-full w-full "
   ></Tabs.Content>
-  <Tabs.Content value="notifcations" class="bg-red-500 h-full w-full "
-  ></Tabs.Content>
+  <Tabs.Content
+    value="notifications"
+    class="h-full w-full grid place-items-center dark:text-white"
+    ><span class="opacity-50 dark:text-white dark:opacity-100">
+      There are no notifications at this time
+    </span>
+  </Tabs.Content>
 </Tabs.Root>
