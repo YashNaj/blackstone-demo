@@ -2,4 +2,6 @@
   import { DashboardPage } from "./index.js";
 </script>
 
-<DashboardPage />
+<div class="w-full max-h-full overflow-y-hidden h-full px-6 py-8">
+  <DashboardPage />
+</div>

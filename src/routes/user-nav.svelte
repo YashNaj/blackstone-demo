@@ -12,16 +12,17 @@
       class="relative h-8 w-8 rounded-full"
     >
       <Avatar.Root class="h-8 w-8">
-        <Avatar.Image src="/avatars/01.png" alt="@shadcn" />
-        <Avatar.Fallback>SC</Avatar.Fallback>
+        <Avatar.Fallback>TP</Avatar.Fallback>
       </Avatar.Root>
     </Button>
   </DropdownMenu.Trigger>
   <DropdownMenu.Content class="w-56" align="end">
     <DropdownMenu.Label class="font-normal">
       <div class="flex flex-col space-y-1">
-        <p class="text-sm font-medium leading-none">Tracy</p>
-        <p class="text-muted-foreground text-xs leading-none">m@example.com</p>
+        <p class="text-sm font-medium leading-none">Tracy Pastor</p>
+        <p class="text-muted-foreground text-xs leading-none">
+          ptracy@blackstone.com
+        </p>
       </div>
     </DropdownMenu.Label>
     <DropdownMenu.Separator />

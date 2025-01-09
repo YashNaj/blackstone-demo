@@ -22,8 +22,8 @@
       label: "Personal Account",
       teams: [
         {
-          label: "Alicia Koch",
-          value: "personal",
+          label: "Tracy Pastor",
+          value: "Blackstone",
         },
       ],
     },
@@ -129,7 +129,7 @@
               }}
             >
               <PlusCircled class="mr-2 h-5 w-5" />
-              Create Team
+              New employee
             </Command.Item>
           </Command.Group>
         </Command.List>
@@ -138,34 +138,28 @@
   </Popover.Root>
   <Dialog.Content>
     <Dialog.Header>
-      <Dialog.Title>Create team</Dialog.Title>
-      <Dialog.Description>
-        Add a new team to manage products and customers.
-      </Dialog.Description>
+      <Dialog.Title>Add employee</Dialog.Title>
+      <Dialog.Description>Add a new employee.</Dialog.Description>
     </Dialog.Header>
     <div>
       <div class="space-y-4 py-2 pb-4">
         <div class="space-y-2">
-          <Label for="name">Team name</Label>
+          <Label for="name">Employee name</Label>
           <Input id="name" placeholder="Acme Inc." />
         </div>
         <div class="space-y-2">
-          <Label for="plan">Subscription plan</Label>
+          <Label for="plan">Team</Label>
           <Select.Root>
             <Select.Trigger>
               <Select.Value placeholder="Select a plan" />
             </Select.Trigger>
             <Select.Content>
-              <Select.Item value="free">
-                <span class="font-medium">Free </span>-<span
-                  class="text-muted-foreground"
-                >
-                  Trial for two weeks
-                </span>
-              </Select.Item>
+              <Select.Item value="free"></Select.Item>
               <Select.Item value="pro">
-                <span class="font-medium">Pro</span> -
-                <span class="text-muted-foreground"> $9/month per user </span>
+                <span class="font-medium">Legal </span> -
+                <span class="text-muted-foreground">
+                  Additional Auhtorization is required</span
+                >
               </Select.Item>
             </Select.Content>
           </Select.Root>
