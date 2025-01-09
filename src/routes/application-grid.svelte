@@ -29,10 +29,10 @@
   ];
 </script>
 
-<div class="w-full h-full px-4 py-4 overflow-y-auto">
-  <div class=" flex flex-wrap items-center space-x-4 justify-between space-y-4">
-    {#each applications as app}
-      <ApplicationCard name={app.name} description={app.description} />
-    {/each}
-  </div>
+<div
+  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 pt-3 overflow-y-auto h-full"
+>
+  {#each applications as app}
+    <ApplicationCard name={app.name} description={app.description} />
+  {/each}
 </div>

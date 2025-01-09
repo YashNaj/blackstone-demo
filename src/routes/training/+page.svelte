@@ -1,5 +1,6 @@
 <script>
   import { Placeholder } from "..";
+  import Training from "./training.svelte";
 </script>
 
 <div class="w-full max-h-full overflow-y-hidden h-full px-6 py-8">
@@ -8,5 +9,5 @@
   >
     <h2 class="text-3xl font-bold tracking-tight">Training</h2>
   </div>
-  <Placeholder />
+  <Training />
 </div>

@@ -40,7 +40,10 @@
       </Card.Root>
     </div>
   </Tabs.Content>
-  <Tabs.Content value="applications" class="h-full w-full ">
+  <Tabs.Content
+    value="applications"
+    class="h-full w-full flex-1 overflow-y-auto"
+  >
     <AppGrid />
   </Tabs.Content>
   <Tabs.Content value="people" class="bg-blue-500 h-full w-full "
