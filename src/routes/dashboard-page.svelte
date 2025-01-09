@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Newsfeed } from "./index.js";
+  import { AppGrid, Newsfeed } from "./index.js";
   import * as Card from "$lib/components/ui/card";
   import * as Tabs from "$lib/components/ui/tabs/index.js";
   import Bell from "lucide-svelte/icons/bell";
@@ -40,8 +40,9 @@
       </Card.Root>
     </div>
   </Tabs.Content>
-  <Tabs.Content value="applications" class="bg-green-500 h-full w-full "
-  ></Tabs.Content>
+  <Tabs.Content value="applications" class="h-full w-full ">
+    <AppGrid />
+  </Tabs.Content>
   <Tabs.Content value="people" class="bg-blue-500 h-full w-full "
   ></Tabs.Content>
   <Tabs.Content

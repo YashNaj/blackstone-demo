@@ -151,7 +151,7 @@
           <Label for="plan">Team</Label>
           <Select.Root>
             <Select.Trigger>
-              <Select.Value placeholder="Select a plan" />
+              <Select.Value placeholder="Select a team" />
             </Select.Trigger>
             <Select.Content>
               <Select.Item value="free"></Select.Item>
