@@ -31,7 +31,9 @@
   }
 </script>
 
-<div class="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
+<div
+  class="flex flex-row fixed md:sticky justify-between items-center mb-6 gap-4 z-[15] bg-white"
+>
   <div class="relative flex-1 max-w-md">
     <Search class="absolute left-2 top-2.5 h-4 w-4 text-gray-500" />
     <Input

@@ -7,7 +7,9 @@
   let searchQuery = $state("");
 </script>
 
-<div class="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
+<div
+  class="flex fixed md:sticky flex-row justify-between items-center mb-6 gap-4 z-[15]"
+>
   <div class="relative flex-1 max-w-sm">
     <Search class="absolute left-2 top-2.5 h-4 w-4 text-gray-500" />
     <Input

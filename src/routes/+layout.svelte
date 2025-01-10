@@ -19,7 +19,7 @@
 </script>
 
 <div
-	class="fixed top-0 left-0 w-full h-[33lvh] bg-white dark:bg-black cursor-none mouse-event-none z-[5] sm:hidden"
+	class="fixed top-0 left-0 w-full h-[28vh] bg-white dark:bg-black cursor-none mouse-event-none z-[5] sm:hidden"
 ></div>
 
 <header

@@ -3,7 +3,7 @@
 </script>
 
 <div
-  class="grid place-items-center space-y-4 h-full my-2 pb-32 grid place-items-center dark:text-white"
+  class="grid place-items-center space-y-4 h-auto my-2 pb-32 grid place-items-center dark:text-white"
 >
   <Construction size="10rem" />
   <h1
