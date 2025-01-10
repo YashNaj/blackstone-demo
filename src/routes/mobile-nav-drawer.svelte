@@ -8,6 +8,7 @@
   import { fly, fade } from "svelte/transition";
   import { quartOut } from "svelte/easing";
   import { onNavigate } from "$app/navigation";
+  import ThemeToggle from "./theme-toggle.svelte";
 
   let isOpen = $state(false);
   let overlayOpacity = $derived(isOpen ? 0.4 : 0);
@@ -58,10 +59,11 @@
     >
       <!-- Team Switcher -->
       <div
-        class="p-4 border-b dark:border-blue-900 dark:border-opacity-50"
+        class="p-4 border-b flex justify-between dark:border-blue-900 dark:border-opacity-50"
         in:fly={{ x: 50, delay: 250, duration: 300, easing: quartOut }}
       >
         <TeamSwitcher />
+        <ThemeToggle />
       </div>
 
       <!-- Search -->
@@ -77,7 +79,7 @@
         class="py-2"
         in:fly={{ x: 50, delay: 350, duration: 300, easing: quartOut }}
       >
-        <MobileMainNav class="" bind:isOpen />
+        <MobileMainNav bind:isOpen />
       </div>
 
       <!-- User Navigation -->
