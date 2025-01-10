@@ -34,7 +34,7 @@ export const ROUTES: Route[] = [
   },
   {
     url: "/human-resources",
-    title: "Human Resources",
+    title: "HR",
     icon: User,
   },
   {

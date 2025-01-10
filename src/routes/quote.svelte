@@ -10,7 +10,7 @@
     loading = true;
     console.log("Fetching new quote...");
     try {
-      const response = await fetch("https://api.quotable.io/random");
+      const response = await fetch("http://api.quotable.io/random");
       console.log("Response status:", response.status);
 
       if (!response.ok) {
@@ -39,12 +39,12 @@
   });
 </script>
 
-<div class="space-y-4 h-80 w-full flex flex-col justify-between">
+<div class="space-y-4 sm:space-y-0 h-full w-full flex flex-col justify-between">
   {#if loading}
     <div class="animate-pulse h-20 bg-muted rounded" />
   {:else if quote}
     <blockquote class="space-y-2">
-      <p class="text-lg">"{quote.content}"</p>
+      <p class="text-lg">{quote.content}</p>
       <footer class="text-sm text-muted-foreground">— {quote.author}</footer>
     </blockquote>
   {:else}

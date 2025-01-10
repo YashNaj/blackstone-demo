@@ -130,7 +130,7 @@
   }
 </script>
 
-<div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+<div class="grid gap-4 md:grid-cols-2 py-8 md:py-0 lg:grid-cols-3">
   <!-- Upcoming Meetings -->
   <Card class="col-span-full md:col-span-2 bg-white dark:bg-gray-950">
     <CardHeader>
@@ -149,7 +149,8 @@
           >
             <div class="flex items-center justify-between">
               <Badge
-                variant={meeting.type === "external" ? "secondary" : "outline"}
+                class="bg-blue-900 text-white"
+                variant={meeting.type === "external" ? "default" : "secondary"}
               >
                 {formatDate(meeting.date)}
               </Badge>
@@ -189,7 +190,7 @@
           <div
             class="flex items-center space-x-4 bg-gray-50 dark:bg-gray-900 p-3 rounded-lg"
           >
-            <Avatar class="h-10 w-10">
+            <Avatar class="h-10 w-10 z-[1]">
               <AvatarImage src={hire.avatar} alt={hire.name} />
               <AvatarFallback
                 >{hire.name
@@ -237,7 +238,7 @@
           <div
             class="flex items-center space-x-4 bg-gray-50 dark:bg-gray-900 p-4 rounded-lg"
           >
-            <Avatar class="h-12 w-12">
+            <Avatar class="h-12 w-12 z-[1]">
               <AvatarImage src={celebration.avatar} alt={celebration.name} />
               <AvatarFallback
                 >{celebration.name

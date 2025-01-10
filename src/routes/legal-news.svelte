@@ -111,38 +111,52 @@
   });
 </script>
 
-<div class="relative w-full h-full overflow-hidden pt-14">
+<div class="relative w-full h-full">
   <div
     bind:this={carousel}
-    class="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory"
-    style="scrollbar-width: none; -ms-overflow-style: none;"
-    on:scroll={handleScroll}
-    on:mouseenter={stopAutoScroll}
-    on:mouseleave={startAutoScroll}
+    class="flex h-full overflow-x-auto hide-scrollbar snap-x snap-mandatory"
+    style="scrollbar-width: none;"
+    onscroll={handleScroll}
+    onmouseenter={stopAutoScroll}
+    onmouseleave={startAutoScroll}
   >
     {#each newsItems as item, index}
       <div
-        class="min-w-full flex-shrink-0 snap-start space-x-2"
+        class="w-full h-full flex-shrink-0 snap-start"
         style="scroll-snap-align: start;"
       >
-        <Card class="h-full border-0 bg-white dark:bg-gray-950">
-          <CardContent class="p-0 h-full">
+        <Card class="relative w-full h-full overflow-hidden">
+          <div class="absolute inset-0">
             <img
               src={item.image}
               alt={item.title}
-              class="w-full h-48 object-cover rounded-lg mx-2"
+              class="w-full h-full object-cover"
             />
-            <div class="p-6 space-y-4">
-              <Badge variant="secondary" class="mb-2">
+            <!-- Gradient overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10"
+            />
+          </div>
+
+          <CardContent
+            class="relative h-full flex flex-col justify-end p-6 text-white"
+          >
+            <div class="space-y-3">
+              <Badge variant="default" class="text-white bg-blue-900">
                 {item.category}
               </Badge>
-              <h3 class="text-xl font-bold tracking-tight dark:text-white">
+
+              <h3
+                class="text-xl font-bold leading-tight md:text-2xl line-clamp-2"
+              >
                 {item.title}
               </h3>
-              <p class="text-sm text-muted-foreground dark:text-gray-400">
+
+              <p class="text-sm text-gray-200 line-clamp-2">
                 {item.description}
               </p>
-              <p class="text-sm text-muted-foreground dark:text-gray-400">
+
+              <p class="text-sm text-gray-300">
                 {item.date}
               </p>
             </div>
@@ -154,28 +168,29 @@
 
   <!-- Navigation Buttons -->
   <button
-    class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 dark:bg-white/20 hover:bg-black/70 dark:hover:bg-white/40 text-white w-8 h-8 rounded-full flex items-center justify-center transition-colors"
-    on:click={previousSlide}
+    class="hidden md:flex absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-10 h-10 rounded-full items-center justify-center transition-colors"
+    onclick={previousSlide}
   >
-    <ChevronLeft class="h-5 w-5" />
-  </button>
-  <button
-    class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 dark:bg-white/20 hover:bg-black/70 dark:hover:bg-white/40 text-white w-8 h-8 rounded-full flex items-center justify-center transition-colors"
-    on:click={nextSlide}
-  >
-    <ChevronRight class="h-5 w-5" />
+    <ChevronLeft class="h-6 w-6" />
   </button>
 
-  <!-- Slide Indicators -->
+  <button
+    class="hidden md:flex absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-10 h-10 rounded-full items-center justify-center transition-colors"
+    onclick={nextSlide}
+  >
+    <ChevronRight class="h-6 w-6" />
+  </button>
+
+  <!-- Indicators -->
   <div
     class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2"
   >
     {#each newsItems as _, index}
       <button
         class="w-2 h-2 rounded-full transition-colors {index === currentIndex
-          ? 'bg-black dark:bg-white'
-          : 'bg-black/30 dark:bg-white/30 hover:bg-black/50 dark:hover:bg-white/50'}"
-        on:click={() => scrollToIndex(index)}
+          ? 'bg-white'
+          : 'bg-white/50 hover:bg-white/75'}"
+        onclick={() => scrollToIndex(index)}
         aria-label="Go to slide {index + 1}"
       />
     {/each}
@@ -183,7 +198,6 @@
 </div>
 
 <style>
-  /* Hide scrollbar for Chrome, Safari and Opera */
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }

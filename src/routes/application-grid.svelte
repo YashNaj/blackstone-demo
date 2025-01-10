@@ -30,7 +30,7 @@
 </script>
 
 <div
-  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4 pt-3 overflow-y-auto h-full"
+  class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:px-4 py-8 overflow-y-auto h-full"
 >
   {#each applications as app}
     <ApplicationCard name={app.name} description={app.description} />

@@ -3,17 +3,11 @@
   import LegalSearch from "./legal-search.svelte";
 </script>
 
-<div class="w-full max-h-full h-full px-6 py-8 overflow-hidden">
-  <div
-    class="flex items-center fixed justify-between space-y-2 bg-inherit sticky"
-  >
-    <h2 class="text-3xl font-bold tracking-tight">Legal</h2>
-  </div>
-
-  <div class="w-full h-full flex flex-col pt-8 overflow-y-auto pb-10">
+<div
+  class="w-full md:overflow-y-hidden overflow-x-hidden overflow-y-auto h-auto md:max-h-full md:h-full px-6 py-8"
+>
+  <div class="space-y-4 md:h-full h-auto relative min-h-0 pb-32">
     <LegalSearch />
-    <div class="w-full h-full overflow-y-auto mb-10">
-      <LegalCards />
-    </div>
+    <LegalCards />
   </div>
 </div>

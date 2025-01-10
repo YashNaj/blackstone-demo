@@ -8,3 +8,4 @@ export { default as TeamSwitcher } from "./team-switcher.svelte";
 export { default as AppGrid } from "./application-grid.svelte";
 export { default as Placeholder } from "./placeholder.svelte";
 export { default as QuoteOfTheDay } from "./quote.svelte";
+export { default as MobileNav } from "./mobile-nav-drawer.svelte";

@@ -13,7 +13,7 @@
 </script>
 
 <Card
-  class="w-64 h-[150px] flex group hover:scale-110 cursor-pointer hover:text-blue-500 dark:hover:text-blue-200 transition-all flex-col justify-between"
+  class="w-full sm:w-64 h-[150px] flex group  sm:hover:scale-110 cursor-pointer sm:hover:text-blue-500 dark:hover:text-blue-200 transition-all flex-col justify-between"
 >
   <CardContent class="p-4 flex flex-col h-full">
     <div class="flex items-center mb-2">
