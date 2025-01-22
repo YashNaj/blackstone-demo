@@ -32,7 +32,7 @@
     "tailwindcss": "^3.4.9",
     "typescript": "^5.0.0",
     "vaul-svelte": "^0.3.2",
-    "vite": "^5.4.11",
+    "vite": "^5.4.12",
     "zod": "^3.24.1"
   },
   "dependencies": {
